@@ -8,16 +8,14 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>service/esecure_ws_definition</module>
-        <module>service/esecure_metier</module>
-        <module>service/esecure_mail_sender</module>     
-        <module>web/esecure_service_impl</module>
+      
+        <module>service/crmed_metier</module>
+        <module>service/mail_sender</module>     
         <!--<module>mock/esecure_client</module>-->
-        <module>web/e-secure</module>
-        <module>mock/esecure_mock_web</module>
-        <module>persistence/esecure_modele</module>
-        <module>dao/esecure_dao</module>
-        <module>service/esecure_rapport_generator</module>
+        <module>web/crmed-web</module>
+        <module>persistence/crmed_modele</module>
+        <module>dao/crmed_dao</module>
+        <module>service/rapport_generator</module>
     </modules>
     <properties>
         <spring.version>4.0.1.RELEASE</spring.version>
