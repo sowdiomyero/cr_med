@@ -7,11 +7,9 @@
     <name>Esecure App Root</name>
     <packaging>pom</packaging>
 
-    <modules>
-      
+    <modules>      
         <module>service/crmed_metier</module>
-        <module>service/mail_sender</module>     
-        <!--<module>mock/esecure_client</module>-->
+        <module>service/mail_sender</module>
         <module>web/crmed-web</module>
         <module>persistence/crmed_modele</module>
         <module>dao/crmed_dao</module>
@@ -21,7 +19,7 @@
         <spring.version>4.0.1.RELEASE</spring.version>
         <skip.deploy.tomcat>true</skip.deploy.tomcat>
         <maven.test.skip>false</maven.test.skip>
-        <site.distrib.root>file:C:\developpement\servers\glassfish\glassfish3\glassfish\domains\dominterne\docroot\site\esecure\esecure-${project.version}</site.distrib.root>
+        <site.distrib.root>file:C:\developpement\servers\glassfish\glassfish3\glassfish\domains\dominterne\docroot\site\crmed\crmed-${project.version}</site.distrib.root>
     </properties>
     <build>
         <finalName>esecure</finalName>
