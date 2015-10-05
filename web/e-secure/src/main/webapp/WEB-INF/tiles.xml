@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    
+    <definition name="layout"
+        template="/WEB-INF/jsp/layouts/htmllayout.jsp">
+        <put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+        <put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+        <put-attribute name="banniere" value="/WEB-INF/jsp/layouts/banniere.jsp" />
+    </definition>
+    <definition name="adminlayout"
+                template="/WEB-INF/jsp/layouts/adminlayout.jsp">
+        <put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+        <put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+    </definition>
+    <definition name="homepage" extends="layout">
+        <!-- if user authentified, display home page -->
+       <put-attribute name="home" value="/WEB-INF/jsp/home.jsp" />
+       <!-- if user is anonymous, invite him to log in application through  login page-->
+       <put-attribute name="login" value="/WEB-INF/jsp/login.jsp" />
+    </definition>
+    
+    <definition name="clientform" extends="layout">
+       <put-attribute name="home" value="/WEB-INF/jsp/formulaireClient.jsp"  />
+       <put-attribute name="login" value="" />
+    </definition>
+    
+     <definition name="userslist" extends="layout">
+       <put-attribute name="home" value="/WEB-INF/jsp/users.jsp"  />
+       <!-- if user is anonymous, invite him to log in application through  login page-->
+        <put-attribute name="login" value="/WEB-INF/jsp/login.jsp" />
+    </definition>
+
+    <definition name="settings" extends="adminlayout">
+        <put-attribute name="home" value="/WEB-INF/jsp/settings.jsp"  />
+        <!-- if user is anonymous, invite him to log in application through  login page-->
+        <put-attribute name="login" value="/WEB-INF/jsp/login.jsp" />
+    </definition>
+
+</tiles-definitions>
